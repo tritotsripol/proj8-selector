@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Selector</title>
+  <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script src="script.js" defer></script>
+</head>
+<body class="Kanit">
+  <section class="header">
+    <div><img src="favicon.png" width="75px" height="75px" alt="favicon"></div>
+    <div><h1 style="font-size: 50px; line-height: 1em">Trithod Site</h1></div>
+    <div class="home"><a href="https://tritotsripol.github.io/trithodhome/"><button data-en="Home" data-th="หน้าหลัก"></button></a></div>
+  </section>
+
+  <section class="web">
+
+    <h1 class="title-box" style="font-size: 50px;" data-en="Color Selector" data-th="วงล้อเลือกสี"></h1>
+
+    <section class="grid">
+      <section><div id="picker"></div></section>
+
+      <section>
+        <div id="preview" class="preview"></div>
+        <div>
+            <p>
+              <label for="text" onclick="copyToClipboard('hexValue')" data-en="Copy HEXA code" data-th="คัดลอกโค้ด HEXA"></label>
+              <input type="text" id="hexValue" value="#00000000">
+            </p>
+            <p>
+              <label for="text" onclick="copyToClipboard('rgbValue')" data-en="Copy RGBA code" data-th="คัดลอกโค้ด RGBA"></label>
+              <input type="text" id="rgbValue" value="rgba(0, 0, 0)">
+            </p>
+            <p>
+              <label for="text" onclick="copyToClipboard('hslValue')" data-en="Copy HSLA code" data-th="คัดลอกโค้ด HSLA"></label>
+              <input type="text" id="hslValue" value="hsla(0, 0%, 0%)">
+            </p>
+        </div>
+      </section>
+    </section>
+
+  </section>
+
+    <section class="footer"
+    data-en="© 2025 Trithod Site. Made by Trithot Sripol."
+    data-th="© 2568 Trithod Site. จัดทำโดย ไตรทศ ศรีพล.">
+  </section>
+
+  <section class="buttons">
+    <!-- languagebtn -->
+    <div>
+      <select class="sectionbtn" id="option" name="option" onchange="changeLanguage(this.value)">
+        <option value="en">ENG</option>
+        <option value="th">ไทย</option>
+      </select>
+    </div>
+  
+      <!-- light theme -->
+      <div>
+        <button class="themebtn" id="theme-toggle">
+          <img class="themeicon" id="theme-icon" src="moon-icon.png" alt="Theme Icon" width="25" height="25">
+        </button>
+      </div>
+
+      <!-- ฺgo to top btn -->
+    <div>
+      <button class="gotop">
+      <img src="up-icon.png" width="25" height="25" class="uppy">
+      </button>
+    </div>
+
+  </section>
+
+</body>
+</html>

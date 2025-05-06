@@ -1,0 +1,358 @@
+h1 {
+  font-size: 36px;
+  margin-top: 25px;
+  margin-bottom:25px;
+}
+.header {
+  display:flex;
+  flex-wrap: nowrap;
+  background: #00000080;
+  height: max-content;
+  color: white;
+  padding: 2em;
+  justify-content: start;
+  align-items: center;
+  gap: 2.5em;
+}
+.home {
+  flex-grow: 1;
+  text-align:end;
+}
+.home > a{
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: font-weight 0.5s ease, font-size 0.5s ease;
+}
+.home > a > button {
+  cursor: pointer;
+  color: white;
+  background: #00000080;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 5em;
+  font-size: 20px;
+  font-family: Kanit;
+  transition: background 1s ease, box-shadow 1s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.home > a > button:hover {
+  background: black;
+  box-shadow: 0 0 5px rgba(0,0,0, 1);
+}
+.footer {
+  background: #00000080;
+  height: max-content;
+  color: white;
+  padding: 1.5em;
+  text-align:start;
+  width: 100%;
+  position: relative;
+  bottom : 0;
+  left: 0;
+  box-sizing: border-box;
+  margin-top:auto;
+  z-index: -1;
+}
+.web {
+  margin:25px;
+}
+body {
+  background-color: #000c33;
+  margin: 0;
+}
+.title-box {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left:10px;
+  padding-right:10px;
+}
+.title-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url(rainbow.jpg);
+  background-size: cover;
+  border-radius: 25px;
+  z-index:-1;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  position: fixed;
+  inset: auto 15px 15px auto;
+  }
+  /* buttons */
+  
+  /* gotop button */
+  .gotop {
+  width: 5em;
+  height: 3em;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: solid 1px black;
+  box-shadow:0 0 5px #002eb080;
+  transition: background-color 1s ease, box-shadow 1s ease;
+  }
+  .gotop:hover {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0, 1);
+  }
+  .uppy {
+  filter: invert(1);
+  opacity: 0.5;
+  }
+  .gotop:hover .uppy {
+  transition: opacity 1s ease;  
+  opacity: 1;
+  }
+  /* gotop button */
+  
+  /* sectionbtn */
+  .sectionbtn {
+  width: 5em ;
+  height: 3em ;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: solid 1px black;
+  box-shadow:0 0 5px #002eb080;
+  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  }
+  .sectionbtn:hover {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+  }
+  .sectionbtn:focus {
+  outline: none;
+  }
+  select.sectionbtn {
+  color: rgba(255,255,255,0.5);
+  font-family: 'Kanit', sans-serif;
+  appearance: none;
+  text-align: center;
+  font-weight: bold;
+  }
+  select.sectionbtn:hover {
+  color: white;
+  }
+  select.sectionbtn div {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  appearance: none;
+  text-align: center;
+  }
+  select.sectionbtn option {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  background-color:#1f1f1f;
+  }
+  /* sectionbtn */
+  
+  /* themebtn */
+  .themebtn {
+  width: 5em ;
+  height: 3em ;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  border: solid 1px black;
+  box-shadow:0 0 5px #002eb080;
+  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  }
+  .themebtn:hover {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+  }
+  .themeicon {
+  filter: invert(1);
+  opacity: 0.5;
+  }
+  .themebtn:hover .themeicon {
+  transition: opacity 1s ease;  
+  opacity: 1;
+  }
+  /* themebtn */
+  
+  body::-webkit-scrollbar {
+  background: rgba(0,0,0, 0.5);
+  border-radius: 25px;
+  width: 15px;
+  height: 15px;
+  }
+  body::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+  border-radius: 25px;
+  width: 50%;
+  height: 15px;
+  }
+
+
+  /*content*/
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 15px;
+  }
+  .grid > section {
+    background: #00000080;
+    padding: 25px;
+    width: max-content;
+    border-radius: 25px;
+    width: max-content ;
+  }
+  .grid > section > div > p > label {
+    color: white;
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1em;
+  }
+  .grid > section > div > p > label:hover {
+    color: black;
+    background: white;
+    transition: color 0.5s ease, background 0.5s ease;
+  }
+  .grid > section > div > p > input {
+    color: white;
+    background: #00000080;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Kanit;
+    font-weight: 100;
+    border: none;
+    font-size: 1em;
+  }
+  .preview {
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  /* view on phone */
+@media (max-width: 767px) {
+  .header > div > h1 {
+    font-size: 36px !important;
+  }
+  .header > div > img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .header {
+    gap: 1.5em;
+    height: 3em;
+  }
+  .headbox {
+    flex-direction: column;
+  }
+  .headbox > div:not(:nth-child(3n)) {
+    border-bottom: white 1px solid;
+    border-right: none;
+  }
+  .color {
+    column-count: 1;
+  }
+  .origin {
+    text-align: center;
+  }
+  }
+  
+  body.light::-webkit-scrollbar {
+    background: rgba(255,255,255, 0.5);
+  }
+  body.light::-webkit-scrollbar-thumb {
+    background: #0044e480;
+  }
+  
+  body.light .gotop, body.light .themebtn {
+    background-color: rgba(255,255,255,0.5);
+    border: solid 1px white;
+    box-shadow:0 0 5px #74bdff80;
+    transition: background-color 1s ease, box-shadow 1s ease;
+  }
+  body.light .gotop:hover, body.light .themebtn:hover {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(255,255,255, 1);
+  }
+  body.light .uppy, body.light .themeicon {
+    filter: invert(0);
+    opacity: 0.5;
+  }
+  body.light .sectionbtn {
+    background-color: rgba(255,255,255,0.5);
+    border: solid 1px white;
+    box-shadow:0 0 5px #74bdff80;
+    transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  }
+  body.light .sectionbtn:hover {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(255,255,255,1);
+  }
+  body.light select.sectionbtn {
+    color: rgba(0,0,0,0.5);
+  }
+  body.light select.sectionbtn:hover {
+    color: black;
+  }
+  body.light select.sectionbtn div {
+    color: black;
+  }
+  body.light select.sectionbtn option {
+    color: black;
+    background-color:white;
+  }
+  
+  body.light .header, body.light .footer {
+    background: #ffffff80;
+    color: #13364e;
+  }
+  body.light .home>a {
+    color: #13364e;
+  }
+  body.light .home > a{
+    color: #13364e;
+  }
+  body.light .home > a > button {
+    color: #13364e;
+    background: #ffffff80;
+    border: 1px solid white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  body.light .home > a > button:hover {
+    background: white;
+    box-shadow: 0 0 5px rgba(255,255,255, 1);
+  }
+  body.light {
+    background-color: #74bdff;
+  }
+  body.light .title-box::before{
+    filter: grayscale(0.25) brightness(1.5) ;
+  }
+  body.light .grid > section {
+    background: #ffffff80;
+  }
+  body.light .grid > section > div > p > label {
+    color: #135fff;
+    background: white;
+  }
+  body.light .grid > section > div > p > label:hover {
+    color: white;
+    background: #135fff;
+  }
+  body.light .grid > section > div > p > input {
+    color: #135fff;
+    background: #ffffffb0;
+  }
