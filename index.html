@@ -27,7 +27,7 @@
 
       <section>
         <div id="preview" class="preview"></div>
-        <div>
+        <div class="code">
             <p>
               <label for="text" onclick="copyToClipboard('hexValue')" data-en="Copy HEXA code" data-th="คัดลอกโค้ด HEXA"></label>
               <input type="text" id="hexValue" value="#00000000">
@@ -42,6 +42,22 @@
             </p>
         </div>
       </section>
+
+      <section>
+        <label data-en="Harmony Type" data-th="ประเภทชุดสีคู่"></label> &nbsp;
+        <select class="opt" id="harmonyType">
+          <option value="complementary">Complementary</option>
+          <option value="triadic">Triadic</option>
+          <option value="analogous">Analogous</option>
+          <option value="tetradic">Tetradic</option>
+          <option value="shades">Shades</option>
+          <option value="tints">Tints</option>
+        </select>
+        <div class="harmony-container">
+          <div id="harmonyGrid"></div>
+        </div>
+      </section>
+
     </section>
 
   </section>

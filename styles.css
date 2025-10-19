@@ -8,7 +8,6 @@ h1 {
   flex-wrap: nowrap;
   background: #00000080;
   height: max-content;
-  color: white;
   padding: 2em;
   justify-content: start;
   align-items: center;
@@ -20,13 +19,11 @@ h1 {
 }
 .home > a{
   cursor: pointer;
-  color: white;
   font-size: 20px;
   transition: font-weight 0.5s ease, font-size 0.5s ease;
 }
 .home > a > button {
   cursor: pointer;
-  color: white;
   background: #00000080;
   border-radius: 15px;
   border: 1px solid black;
@@ -43,7 +40,6 @@ h1 {
 .footer {
   background: #00000080;
   height: max-content;
-  color: white;
   padding: 1.5em;
   text-align:start;
   width: 100%;
@@ -60,11 +56,11 @@ h1 {
 body {
   background-color: #000c33;
   margin: 0;
+  color: white;
 }
 .title-box {
   position: relative;
   text-align: center;
-  color: white;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left:10px;
@@ -88,6 +84,38 @@ body {
   position: fixed;
   inset: auto 15px 15px auto;
   }
+.opt {
+  background: black;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: Kanit;
+  color: white;
+  border: solid 1px black;
+}
+.opt:hover {
+  color: black;
+  background: white;
+  border: solid 1px white;
+  transition: color 0.5s ease, background 0.5s ease, border 0.5s ease;
+}
+.opt:focus {
+  outline: none;
+}
+.harmony-color-preview {
+  width: 350px;
+  height: 30px;
+  border-radius: 10px 10px 0 0;
+}
+.harmony-code {
+  background-color: #00000080;
+  padding: 10px;
+  font-weight: 100;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 10px;
+}
   /* buttons */
   
   /* gotop button */
@@ -142,17 +170,12 @@ body {
   text-align: center;
   font-weight: bold;
   }
-  select.sectionbtn:hover {
-  color: white;
-  }
   select.sectionbtn div {
-  color: white;
   font-family: 'Kanit', sans-serif;
   appearance: none;
   text-align: center;
   }
   select.sectionbtn option {
-  color: white;
   font-family: 'Kanit', sans-serif;
   background-color:#1f1f1f;
   }
@@ -189,7 +212,7 @@ body {
   height: 15px;
   }
   body::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.5);
+  background: #23004b;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -205,14 +228,20 @@ body {
     margin: 15px;
   }
   .grid > section {
-    background: #00000080;
+    background: linear-gradient(to bottom, #001352, #23004b);
     padding: 25px;
-    width: max-content;
+    width: 350px;
     border-radius: 25px;
-    width: max-content ;
+    justify-items: center;
+    box-shadow: 0 0 0px #350071;
+    transition: box-shadow 0.5s ease, width 0.5s ease;
+  }
+  .grid > section:hover {
+    box-shadow: 0 0 25px #35007180;
+    width: 400px;
   }
   .grid > section > div > p > label {
-    color: white;
+
     background: black;
     padding: 5px;
     border-radius: 10px;
@@ -227,7 +256,6 @@ body {
     transition: color 0.5s ease, background 0.5s ease;
   }
   .grid > section > div > p > input {
-    color: white;
     background: #00000080;
     padding: 5px;
     border-radius: 10px;
@@ -236,6 +264,7 @@ body {
     font-weight: 100;
     border: none;
     font-size: 1em;
+    color: white;
   }
   .preview {
     width: 350px;
@@ -244,6 +273,12 @@ body {
   }
   .Kanit {
     font-family: Kanit;
+  }
+  .code {
+    justify-items: center;
+  }
+  .code > p > input {
+    width: 200px;
   }
 
   /* view on phone */
@@ -339,14 +374,19 @@ body {
     background: white;
     box-shadow: 0 0 5px rgba(255,255,255, 1);
   }
-  body.light {
-    background-color: #74bdff;
+  body.light .title-box {
+    color: white;
   }
-  body.light .title-box::before{
-    filter: grayscale(0.25) brightness(1.5) ;
+  body.light {
+    background-color: #81a9ff;
+    color: #135fff;
   }
   body.light .grid > section {
-    background: #ffffff80;
+    background: linear-gradient(to bottom, #dae5ff, #b7ccff);
+    box-shadow: 0 0 0px #135fff80;
+  }
+  body.light .grid > section:hover {
+    box-shadow: 0 0 25px #135fff80;
   }
   body.light .grid > section > div > p > label {
     color: #135fff;
@@ -360,3 +400,16 @@ body {
     color: #135fff;
     background: #ffffffb0;
   }
+  body.light .harmony-code {
+    background-color: #ffffff80;
+  }
+body.light .opt {
+  background: white;
+  border: solid 1px white;
+  color: #135fff;
+}
+body.light .opt:hover {
+  color: white;
+  background: #135fff;
+  border: solid 1px #135fff;
+}
