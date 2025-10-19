@@ -23,6 +23,7 @@ h1 {
   transition: font-weight 0.5s ease, font-size 0.5s ease;
 }
 .home > a > button {
+  color: white;
   cursor: pointer;
   background: #00000080;
   border-radius: 15px;
