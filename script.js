@@ -155,15 +155,33 @@ function updateHarmony(color) {
         const rgb = hslaToRgba(c.h, c.s, c.l, c.a);
         const rgbaString = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${rgb.a.toFixed(2)})`;
         
+        // แปลง RGB เป็น HEX
+        const hexString = rgbaToHex(rgb.r, rgb.g, rgb.b, rgb.a);
+        
         return `
             <div><b>${c.name}</b></div>
             <div class="harmony-color-preview" style="background-color: ${hslaString}"></div>
             <div class="harmony-code">
-              <div>${hslaString}</div>
-              <div>${rgbaString}</div>
+            <div>${hexString}</div>
+            <div>${hslaString}</div>
+            <div>${rgbaString}</div>
             </div>
         `;
     }).join('');
+}
+
+// ฟังก์ชันแปลง RGBA เป็น HEX
+function rgbaToHex(r, g, b, a) {
+    const toHex = (n) => {
+        const hex = Math.round(n).toString(16).padStart(2, '0');
+        return hex.toUpperCase();
+    };
+    
+    if (a < 1) {
+        const alphaHex = toHex(a * 255);
+        return `#${toHex(r)}${toHex(g)}${toHex(b)}${alphaHex}`;
+    }
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
 function hslaToRgba(h, s, l, a) {

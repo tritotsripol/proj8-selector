@@ -55,7 +55,7 @@ h1 {
   margin:25px;
 }
 body {
-  background-color: #000c33;
+  background-color: #131929;
   margin: 0;
   color: white;
 }
@@ -66,6 +66,8 @@ body {
   padding-bottom: 0.5em;
   padding-left:10px;
   padding-right:10px;
+  border-radius: 15px;
+  border: 1px solid #002087;
 }
 .title-box::before {
   content: "";
@@ -73,7 +75,8 @@ body {
   top: 0; left: 0; right: 0; bottom: 0;
   background-image: url(rainbow.jpg);
   background-size: cover;
-  border-radius: 25px;
+  border-radius: 15px;
+  opacity: 0.5;
   z-index:-1;
 }
 
@@ -94,13 +97,12 @@ body {
   font-size: 1em;
   font-family: Kanit;
   color: white;
-  border: solid 1px black;
+  border: none;
+  transition: color 0.5s ease, background 0.5s ease;
 }
 .opt:hover {
   color: black;
   background: white;
-  border: solid 1px white;
-  transition: color 0.5s ease, background 0.5s ease, border 0.5s ease;
 }
 .opt:focus {
   outline: none;
@@ -128,7 +130,7 @@ body {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border: solid 1px black;
-  box-shadow:0 0 5px #002eb080;
+  box-shadow:0 0 5px #00208780;
   transition: background-color 1s ease, box-shadow 1s ease;
   }
   .gotop:hover {
@@ -154,7 +156,7 @@ body {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border: solid 1px black;
-  box-shadow:0 0 5px #002eb080;
+  box-shadow:0 0 5px #00208780;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
   }
   .sectionbtn:hover {
@@ -189,7 +191,7 @@ body {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
   border: solid 1px black;
-  box-shadow:0 0 5px #002eb080;
+  box-shadow:0 0 5px #00208780;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
   }
   .themebtn:hover {
@@ -213,7 +215,7 @@ body {
   height: 15px;
   }
   body::-webkit-scrollbar-thumb {
-  background: #23004b;
+  background: #002087;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -229,16 +231,17 @@ body {
     margin: 15px;
   }
   .grid > section {
-    background: linear-gradient(to bottom, #001352, #23004b);
+    border: 1px solid #002087;
+    background: linear-gradient(to bottom, #00208740, #00208720);
     padding: 25px;
     width: 350px;
-    border-radius: 25px;
+    border-radius: 15px;
     justify-items: center;
-    box-shadow: 0 0 0px #350071;
+    box-shadow: 0 0 0px #002087;
     transition: box-shadow 0.5s ease, width 0.5s ease;
   }
   .grid > section:hover {
-    box-shadow: 0 0 25px #35007180;
+    box-shadow: 0 0 10px #002087;
     width: 400px;
   }
   .grid > section > div > p > label {
@@ -314,13 +317,13 @@ body {
     background: rgba(255,255,255, 0.5);
   }
   body.light::-webkit-scrollbar-thumb {
-    background: #0044e480;
+    background: #135fff;
   }
   
   body.light .gotop, body.light .themebtn {
     background-color: rgba(255,255,255,0.5);
     border: solid 1px white;
-    box-shadow:0 0 5px #74bdff80;
+    box-shadow:0 0 5px #135fff80;
     transition: background-color 1s ease, box-shadow 1s ease;
   }
   body.light .gotop:hover, body.light .themebtn:hover {
@@ -334,7 +337,7 @@ body {
   body.light .sectionbtn {
     background-color: rgba(255,255,255,0.5);
     border: solid 1px white;
-    box-shadow:0 0 5px #74bdff80;
+    box-shadow:0 0 5px #135fff80;
     transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
   }
   body.light .sectionbtn:hover {
@@ -376,21 +379,27 @@ body {
     box-shadow: 0 0 5px rgba(255,255,255, 1);
   }
   body.light .title-box {
-    color: white;
+    color: #002087;
+    border: 1px solid #135fff;
+  }
+  body.light .title-box:before {
+    opacity: 0.5;
   }
   body.light {
-    background-color: #81a9ff;
-    color: #135fff;
+    background-color: #d0dfff;
+    color: #002087;
   }
   body.light .grid > section {
-    background: linear-gradient(to bottom, #dae5ff, #b7ccff);
+    border: 1px solid #135fff;
+    background: linear-gradient(to bottom, #135fff40, #135fff20);
     box-shadow: 0 0 0px #135fff80;
+
   }
   body.light .grid > section:hover {
-    box-shadow: 0 0 25px #135fff80;
+    box-shadow: 0 0 10px #135fff;
   }
   body.light .grid > section > div > p > label {
-    color: #135fff;
+    color: #002087;
     background: white;
   }
   body.light .grid > section > div > p > label:hover {
@@ -398,7 +407,7 @@ body {
     background: #135fff;
   }
   body.light .grid > section > div > p > input {
-    color: #135fff;
+    color: #002087;
     background: #ffffffb0;
   }
   body.light .harmony-code {
@@ -406,11 +415,9 @@ body {
   }
 body.light .opt {
   background: white;
-  border: solid 1px white;
-  color: #135fff;
+  color: #002087;
 }
 body.light .opt:hover {
   color: white;
   background: #135fff;
-  border: solid 1px #135fff;
 }
